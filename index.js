@@ -1,16 +1,11 @@
-const next = require('next');
-const http = require('http');
+// runStart.js
+const { spawn } = require('child_process');
 
-const port = 5497;
-const dev = true; // Set to false for production
-const app = next({ dev });
-const handle = app.getRequestHandler();
+const child = spawn('npm', ['run', 'dev', '-p 5497'], {
+  stdio: 'inherit', // Pipe child's stdout/stderr directly to this process
+  shell: true       // Important on Windows to ensure `npm` is recognized
+});
 
-app.prepare().then(() => {
-  http.createServer((req, res) => {
-    handle(req, res);
-  }).listen(port, (err) => {
-    if (err) throw err;
-    console.log(`Next.js server running at http://localhost:${port}`);
-  });
+child.on('close', (code) => {
+  console.log(`Next.js process exited with code ${code}`);
 });
