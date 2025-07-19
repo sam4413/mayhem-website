@@ -217,7 +217,7 @@ export function Footer() {
             <a href="/rules" className="text-white hover:text-gray-300">Game Rules</a>
           </li>
           <li>
-            <a href="/appeals" className="text-white hover:text-gray-300">Appeals</a>
+            <a href="https://forums.mayhem-gaming.com" className="text-white hover:text-gray-300">Forums</a>
           </li>
           <li>
             <a href="/status" className="text-white hover:text-gray-300">Status</a>
@@ -227,9 +227,6 @@ export function Footer() {
           </li>
           <li>
             <a href="/about" className="text-white hover:text-gray-300">About</a>
-          </li>
-          <li>
-            <a href="/about" className="text-white hover:text-gray-300">Discord</a>
           </li>
         </ul>
       </nav>
