@@ -41,7 +41,7 @@ export function Header() {
             <ul className="flex list-none m-0 p-0 items-center space-x-10">
               <li>
                 <a href="/rules" className="text-white hover:text-gray-300">
-                  Game Rules
+                  Rules
                 </a>
               </li>
               <li>
@@ -148,8 +148,8 @@ export function Header() {
         <nav>
           <ul className="flex flex-col list-none m-0 p-5 space-y-4">
             <li>
-              <a href="/servers" className="text-white hover:text-gray-300">
-                Servers & Rules
+              <a href="/rules" className="text-white hover:text-gray-300">
+                Rules
               </a>
             </li>
             <li>
@@ -217,7 +217,7 @@ export function Footer() {
             <a href="/rules" className="text-white hover:text-gray-300">Game Rules</a>
           </li>
           <li>
-            <a href="https://forums.mayhem-gaming.com" className="text-white hover:text-gray-300">Forums</a>
+            <a href="https://forums.mayhem-gaming.com/forumdisplay.php?fid=13" className="text-white hover:text-gray-300">Appeals</a>
           </li>
           <li>
             <a href="/status" className="text-white hover:text-gray-300">Status</a>
@@ -227,6 +227,12 @@ export function Footer() {
           </li>
           <li>
             <a href="/about" className="text-white hover:text-gray-300">About</a>
+          </li>
+          <li>
+            <a href="/about" className="text-white hover:text-gray-300">Discord</a>
+          </li>
+          <li>
+            <a href="https://bans.mayhem-gaming.com" className="text-white hover:text-gray-300">Ban Lookup</a>
           </li>
         </ul>
       </nav>
