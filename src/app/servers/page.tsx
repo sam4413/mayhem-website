@@ -50,10 +50,10 @@ export default function Servers() {
                       <BgImageTextCardShaded
                         title={
                           <span className="text-3xl lg:text-5xl text-center font-semibold text-white flex items-center justify-center gap-2">
-                            Creative PVP <FaSteam />
+                            Creative+ PVP <FaSteam />
                           </span>
                         }
-                        alt={"Creative PVP"}
+                        alt={"Creative+ PVP"}
                         image="/images/gamebanners/steam creative.png"
                         description={<>
                         <p className="text-2xl text-center font-bold text-blue-200"><a href="steam://connect/45.47.129.150:21099">45.47.129.150:21099</a></p>
@@ -123,20 +123,7 @@ export default function Servers() {
                       }
                       />
 
-                      <BgImageTextCardShaded
-                        title={
-                          <span className="text-xl lg:text-xl text-center font-semibold text-white flex items-center justify-center gap-2">
-                            Mayhemverse Modded Survival <FaSteam />
-                          </span>
-                        }
-                        alt="Space Engineers Mayhemverse Modded Survival"
-                        image="/images/gamebanners/udarvis.jpg"
-                        description={<>
-                        <p className="text-2xl text-center font-bold text-blue-200"><a href="steam://connect/45.47.129.150:27020">45.47.129.150:27020</a></p>
-                        <p className="text-center text-lg font-bold">Looking for a real survival challenge? Join a fully modded Space Engineers server built around the Survival Server Modpack. <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3502133479" className="text-blue-300 hover:underline">Click here to view the modpack</a></p>
-                      </>
-                      }
-                      />
+                      
 
                       </div>
                     }
