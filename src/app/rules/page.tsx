@@ -44,11 +44,7 @@ export default function Servers() {
                   properties={"bg-blue-500"}
                   description={<Editable path="/public/editables/rules/creative.md" />}
                 />
-                <ColoredTextCard
-                  title={<span className="text-2xl lg:text-4xl text-center font-semibold text-white">Factions Creative</span>}
-                  properties={"bg-blue-800"}
-                  description={<Editable path="/public/editables/rules/factionscreative.md" />}
-                />
+                
                 <ColoredTextCard
                   title={<span className="text-2xl lg:text-4xl text-center font-semibold text-white">Scrapyard Survival</span>}
                   properties={"bg-amber-500"}
