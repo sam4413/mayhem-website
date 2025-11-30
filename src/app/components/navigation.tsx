@@ -19,7 +19,7 @@ export function Header() {
 
   return (
     <>
-      <div className="fixed top-0 w-full h-16 bg-slate-600/50 backdrop-blur flex items-center px-5 z-50">
+      <div className="fixed top-0 w-full h-16 bg-gray-950 backdrop-blur flex items-center px-5 z-50 orbitron-600 text-gray-500">
         {/* Left: Logo */}
         <div className="flex-1 flex items-center">
           <a href="/">
@@ -31,7 +31,6 @@ export function Header() {
                 height={100}
                 className="inline-block h-10 w-10 mr-2"
               />
-              <span className="text-white font-semibold">Mayhem Industries</span>
             </div>
           </a>
         </div>
@@ -68,7 +67,7 @@ export function Header() {
           </nav>
         </div>
         {/* Right: Discord & Mobile Menu Toggle */}
-        <div className="flex-1 flex justify-end items-center">
+        <div className="flex-1 flex justify-end items-center ">
           <a
             href="https://mayhemindustriesgaming.tip4serv.com/"
             className="hidden md:flex text-white bg-amber-500 hover:bg-amber-400 px-4 py-2 rounded-md items-center mr-4 transition-all duration-200 transform hover:scale-105 relative overflow-hidden group"
@@ -137,7 +136,7 @@ export function Header() {
 
       {/* Mobile Menu with smooth dropdown animation */}
       <div
-        className={`fixed top-16 left-0 w-full bg-slate-600/50 backdrop-blur md:hidden z-40 overflow-hidden transition-all duration-500 ease-in-out ${
+        className={`orbitron-600 fixed top-16 left-0 w-full bg-gray-950/50 rounded-b-2xl backdrop-blur md:hidden z-40 overflow-hidden transition-all duration-500 ease-in-out ${
           isOpen ? 'max-h-[500px] opacity-100 pointer-events-auto' : 'max-h-0 opacity-0 pointer-events-none'
         }`}
         style={{

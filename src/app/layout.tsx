@@ -1,16 +1,35 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Orbitron, Montserrat, Open_Sans, JetBrains_Mono} from "next/font/google";
 import "./globals.css";
 import Image from "next/image";
 import {Header, Footer} from "./components/navigation"
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const orbitron = Orbitron({
+  variable: "--font-orbitron",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
   subsets: ["latin"],
 });
+
+const open_sans = Open_Sans({
+  variable: "--font-open-sans",
+  subsets: ["latin"],
+});
+
+const jetBrains_mono = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
+  subsets: ["latin"],
+});
+/*
+Background: bg-gray-900
+Paragraph text: text-gray-400
+Header-text: text-white
+Icon: blue-500
+Border: border-yellow-500
+Card background: bg-gray-800
+
+*/
 
 export const metadata = {
   title: "Mayhem Industries",
@@ -19,9 +38,9 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-slate-900 h-screen text-white fadeInQuickly`}>
+      <body className={`${open_sans.className} ${orbitron.variable} ${jetBrains_mono.variable} antialiased bg-slate-900 h-screen text-white fadeInQuickly`}>
         <Header />
-          <div className="bg-gradient-to-b from-purple-800 to-slate-950 min-h-screen">
+          <div className="bg-gray-950 min-h-screen">
             {children}
           </div>
         <Footer />

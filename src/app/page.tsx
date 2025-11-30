@@ -1,34 +1,39 @@
 "use client";
 import Image from "next/image";
-import Starfield from "./components/starfield";
 import { FaDiscord } from "react-icons/fa";
 import { IoGameController } from "react-icons/io5";
-import {ImageCard, BgImageCard} from "./components/cards";
+import { IoMdChatbubbles } from "react-icons/io";
+import {ImageCard, BgImageCard, IconCard} from "./components/cards";
 import {Editable} from "./components/editable";
 import { MainPageLander } from "./components/navigation";
+import {VideoGallery} from './components/gallery';
+import { RiComputerFill } from "react-icons/ri";
+const videos = [
+  '/videos/Background01.mp4',
+  '/videos/Background02.mp4',
+  '/videos/Background06.mp4',
+];
 
 export default function Home() {
   return (
     <div className="relative overflow-hidden">
       {/* Starfield */}
-      <div className="absolute inset-0 z-0 pointer-events-none">
-        
-      </div>
-
-      <div className="relative h-screen">
         <div className="absolute inset-0">
-          <div className="relative h-full w-full bg-slate-950 ">
-            <div className="fadeInSlowly [&>div]:absolute [&>div]:inset-0 [&>div]:bg-[radial-gradient(circle_800px_at_50%_500px,#17006180,transparent)]">
-            <Starfield />
+          <div className="relative h-full w-full bg-slate-950 z-0">
+            <div className="fadeInVerySlowly [&>div]:absolute">
+              <VideoGallery videos={videos} intervalMs={20000} opacity={50}/>
             </div>
           </div>
         </div>
-        <div className="relative z-10 flex h-full flex-1 items-center justify-center px-4">
-              <div className="text-center">
-                <h1 className="text-4xl xl:text-8xl lg:text-6xl md:text-4xl font-bold tracking-tight text-white">
-                  <span className="lexend-mega-landing bg-radial from-blue-300 to-purple-950 bg-clip-text text-transparent">MAYHEM INDUSTRIES</span>
+
+
+      <div className="relative h-screen fadeInSlowly bg-black/25 [&>div]:bg-[radial-gradient(circle_1000px_at_10%_500px,#17006180,transparent)]">
+        <div className="relative z-10 flex h-full items-center px-4">
+              <div className="w-full lg:w-1/2 xl:w-250 pt-24 text-center lg:text-left lg:ml-10 xl:ml-24 ">
+                <h1 className="text-6xl xl:text-8xl lg:text-6xl md:text-6xl font-bold tracking-tight text-white">
+                  <span className="orbitron-900 text-yellow-300">MAYHEM INDUSTRIES</span>
                 </h1>
-                <p className="lexend-mega-landing mx-auto mb-8 text-2xl text-white">
+                <p className="orbitron-800 mx-auto mb-8 text-2xl text-white">
                   Connect, discuss, and conquer in a community made for gamers.
                 </p>
                 <div className="inline-flex border border-slate-200 rounded-none overflow-hidden">
@@ -37,7 +42,7 @@ export default function Home() {
                     className="lg:min-w-xs relative flex items-center justify-center hover:bg-blue-800 bg-slate-950/50 text-slate-200 font-extrabold transition-all duration-200 text-lg md:text-xl lg:text-2xl px-6 py-2 md:px-8 md:py-3 lg:px-16 lg:py-4 border-r border-slate-200 tracking-wide group focus:outline-none"
                   >
                     <span className="absolute top-0 left-0 w-0 h-0 border-t-[20px] border-t-slate-200 border-l-[20px] border-l-transparent  transition-all duration-200 -rotate-90"></span>
-                    <span className="relative z-10 flex items-center gap-2">
+                    <span className="relative z-10 flex items-center gap-2 montserrat-900">
                       <IoGameController /> JOIN NOW
                     </span>
                   </a>
@@ -46,7 +51,7 @@ export default function Home() {
                     className="lg:min-w-xs relative flex items-center justify-center hover:bg-blue-800 bg-slate-950/50 text-slate-200 font-extrabold transition-all duration-200 text-lg md:text-xl lg:text-2xl px-6 py-2 md:px-8 md:py-3 lg:px-12 lg:py-4 tracking-wide group focus:outline-none"
                   >
                     <span className="absolute bottom-0 right-0 w-0 h-0 border-b-[20px] border-b-slate-200 border-r-[20px] border-r-transparent transition-all duration-200 rotate-270"></span>
-                    <span className="relative z-10 flex items-center gap-2">
+                    <span className="relative z-10 flex items-center gap-2 montserrat-900">
                       <FaDiscord /> DISCORD
                     </span>
                   </a>
@@ -57,31 +62,55 @@ export default function Home() {
       </div>
 
       {/* Text below the main area */}
-      <main className="grid grid-cols-1 md:grid-cols-1 gap-8 relative z-10 ml-8 mr-8 lg:ml-72 lg:mr-72">
+      <main className="grid grid-cols-1 md:grid-cols-1 gap-8 relative z-10 ml-8 mr-8 lg:ml-10 lg:mr-10 xl:ml-24 xl:mr-24">
         <section className="p-6 rounded-lg mt-16">
-          <h2 className="text-4xl lg:text-6xl font-semibold mb-4 lexend-mega-landing text-blue-400">OUR MISSION</h2>
-          <div className="text-xl lg:text-2xl"><Editable path="/public/editables/home/ourmission.md"/></div>
+          <h2 className="orbitron-900 text-3xl lg:text-5xl font-semibold mb-4 text-blue-400">OUR MISSION</h2>
+          <div className="text-lg lg:text-xl text-gray-400"><Editable path="/public/editables/home/ourmission.md"/></div>
         </section>
         <section className="p-6 rounded-lg mt-16">
-          <h2 className="text-4xl lg:text-6xl font-semibold mb-4 lexend-mega-landing text-blue-400">WHAT WE DO</h2>
-          <p className="text-xl lg:text-2xl">Explore our services and find the perfect fit for your gaming experience.</p>
+          <h2 className="orbitron-900 text-3xl lg:text-5xl font-semibold mb-4 text-blue-400">WHAT WE DO</h2>
+          <p className="text-lg lg:text-xl text-gray-400">Explore our services and find the perfect fit for your gaming experience.</p>
           {/* ImageCards */}
           <div className="grid grid-cols-1 md:grid-cols-1 xl:grid-cols-3 gap-8 relative z-10 mt-8">
-            <ImageCard
-              image="/images/whatwedo/minecraft.png"
+            <IconCard
+              icon={<IoMdChatbubbles className="text-blue-400"/>}
               alt="minecraft"
-              text={<Editable path="/public/editables/home/what_we_do/fourms.md"/>}
+              text={<>
+              <div>
+                <p className="text-center text-2xl font-bold text-white">Community Forums</p>
+              </div>
+              <p className="text-center mt-2 text-gray-400">
+                Join discussions, share ideas, and connect with fellow gamers in our vibrant community forums.
+              </p>
+              </>}
             />
-            <ImageCard
-              image="/images/whatwedo/spaceengineers.png"
-              alt="space engineers"
-              text={<Editable path="/public/editables/home/what_we_do/crossplay.md"/>}
+
+            <IconCard
+              icon={<IoGameController className="text-blue-400"/>}
+              alt="minecraft"
+              text={<>
+              <div>
+                <p className="text-center text-2xl font-bold text-white">Crossplay</p>
+              </div>
+              <p className="text-center mt-2 text-gray-400">
+                Crossplay for games like Space Engineers and Minecraft, connecting players across platforms.
+              </p>
+              </>}
             />
-            <BgImageCard
-              image="/images/whatwedo/rust.png"
-              alt="rust"
-              text={<Editable path="/public/editables/home/what_we_do/multiplegames.md"/>}
+
+            <IconCard
+              icon={<RiComputerFill className="text-blue-400"/>}
+              alt="minecraft"
+              text={<>
+              <div>
+                <p className="text-center text-2xl font-bold text-white">Multiple Games</p>
+              </div>
+              <p className="text-center mt-2 text-gray-400">
+                Where gamers can stay connected, find factions to join, team up together, and more!
+              </p>
+              </>}
             />
+            
             
           </div>
 
@@ -89,10 +118,10 @@ export default function Home() {
         </section>
 
         <section className="p-6 rounded-lg mt-16">
-          <h2 className="text-4xl lg:text-6xl font-semibold mb-4 lexend-mega-landing text-blue-400">OUR SERVERS</h2>
-          <p className="text-xl lg:text-2xl">As we self host our top of the line AMD AM4 and AM5 Ryzen servers, experience unparallelled and smooth gameplay across all our servers.</p>
+          <h2 className="orbitron-900 text-3xl lg:text-5xl font-semibold mb-4 text-blue-400">OUR SERVERS</h2>
+          <p className="text-lg lg:text-xl text-gray-400">We self host all of our hardware with top-of-the-line AM4 and AM5 processors. Experience unparalleled smooth and unbothered gameplay across all of our servers.</p>
           {/* ImageCards */}
-          <div className="grid grid-cols-1 md:grid-cols-1 xl:grid-cols-3 gap-8 relative z-10 mt-8">
+          <div className="grid grid-cols-1 md:grid-cols-1 xl:grid-cols-3 gap-8 relative z-10 mt-8 text-center">
             <BgImageCard
               image="/images/server1.webp"
               alt="servers"

@@ -30,13 +30,13 @@ export function Editable({ path }: EditableProps) {
   // Define custom components with Tailwind classes
   const components = {
     h1: ({ node, ...props }: any) => (
-      <h1 className="text-4xl font-bold" {...props} />
+      <h1 className="text-4xl orbitron-900 font-bold" {...props} />
     ),
     h2: ({ node, ...props }: any) => (
-      <h2 className="text-3xl font-bold" {...props} />
+      <h2 className="text-3xl orbitron-800 font-bold" {...props} />
     ),
     h3: ({ node, ...props }: any) => (
-      <h3 className="text-2xl font-bold mt-3" {...props} />
+      <h3 className="text-2xl font-bold montserrat-600 mt-3" {...props} />
     ),
     h4: ({ node, ...props }: any) => (
       <h3 className="text-xl my-2 mt-3" {...props} />
@@ -63,7 +63,7 @@ export function Editable({ path }: EditableProps) {
       </div>
     ),
     code: ({ node, ...props }: any) => (
-      <div className="bg-gray-950 p-4 rounded-sm text-gray-300 text-wrap" {...props} />
+      <div className="bg-gray-950 m-4 p-4 rounded-md text-gray-300 text-wrap jetbrains-mono" {...props} />
     )
   };
 

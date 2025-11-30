@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import Starfield from "../components/starfield";
 import {ImageCard, TextCard, BgImageCard, BgImageTextCard, ColoredTextCard, BgImageTextCardShaded} from "../components/cards";
 import {Editable} from "../components/editable";
 import {SubPageLander} from "../components/navigation";
@@ -17,7 +16,7 @@ export default function Servers() {
         <div className="absolute inset-0">
           <div className="relative h-full w-full bg-slate-950 ">
             <div className="fadeInSlowly [&>div]:absolute [&>div]:inset-0 [&>div]:bg-[radial-gradient(circle_800px_at_50%_500px,#17006180,transparent)]">
-            <Starfield />
+            
             </div>
           </div>
         </div>
