@@ -35,7 +35,7 @@ export default function Servers() {
       </div>
 
       {/* Text below the main area */}
-      <main className="grid grid-cols-1 md:grid-cols-1 gap-8 relative z-10 ml-8 mr-8 lg:ml-36 lg:mr-36 xl:ml-96 xl:mr-96">
+      <main className="grid grid-cols-1 md:grid-cols-1 gap-8 relative z-10 ml-3 mr-3 lg:ml-12 lg:mr-12 xl:ml-36 xl:mr-36">
         <div className="grid grid-cols-1 md:grid-cols-1 xl:grid-cols-1 gap-8 relative z-10 mt-8">
             
             <BgImageTextCardShaded

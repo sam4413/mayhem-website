@@ -1,13 +1,14 @@
 "use client";
 import Image from "next/image";
 import { FaDiscord } from "react-icons/fa";
-import { IoGameController } from "react-icons/io5";
+import { IoGameController, IoLogoDiscord } from "react-icons/io5";
 import { IoMdChatbubbles } from "react-icons/io";
 import {ImageCard, BgImageCard, IconCard} from "./components/cards";
 import {Editable} from "./components/editable";
 import { MainPageLander } from "./components/navigation";
 import {VideoGallery} from './components/gallery';
 import { RiComputerFill } from "react-icons/ri";
+import DiscordLatestMessage from "./components/DiscordLatestMessage";
 const videos = [
   '/videos/Background01.mp4',
   '/videos/Background02.mp4',
@@ -20,7 +21,7 @@ export default function Home() {
       {/* Starfield */}
         <div className="absolute inset-0">
           <div className="relative h-full w-full bg-slate-950 z-0">
-            <div className="fadeInVerySlowly [&>div]:absolute">
+            <div className="fadeInVerySlowly [&>div]:absolute xs:hidden sm:hidden">
               <VideoGallery videos={videos} intervalMs={20000} opacity={50}/>
             </div>
           </div>
@@ -57,6 +58,14 @@ export default function Home() {
                   </a>
                 </div>
               </div>
+              <div className="ml-16 mr-16 p-5 w-1/2 hidden xl:inline bg-slate-950/70 rounded-2xl max-h-1/3 overflow-y-auto backdrop-blur-md ">
+              <p className="text-5xl orbitron-900 ">Latest news:</p>
+                <div className="mt-5">
+                <DiscordLatestMessage channelId="1057393693398675486" />
+                </div>
+              </div>
+
+
             </div>
         
       </div>
@@ -65,22 +74,30 @@ export default function Home() {
       <main className="grid grid-cols-1 md:grid-cols-1 gap-8 relative z-10 ml-8 mr-8 lg:ml-10 lg:mr-10 xl:ml-24 xl:mr-24">
         <section className="p-6 rounded-lg mt-16">
           <h2 className="orbitron-900 text-3xl lg:text-5xl font-semibold mb-4 text-blue-400">OUR MISSION</h2>
-          <div className="text-lg lg:text-xl text-gray-400"><Editable path="/public/editables/home/ourmission.md"/></div>
+          <div className="text-lg lg:text-xl text-gray-400">
+Mayhem Industries Gaming Network is a community built for gamers, by gamers. We host dedicated servers across multiple titles, starting with Space Engineers and Rust, as well as Stormworks, Minecraft, Valheim, Enshrouded, and more. Our servers are designed to deliver reliable performance, fair rules, and a welcoming environment where players can truly enjoy their games.<br/><br/>
+
+Our mission is to create a space where players can connect, collaborate, and game without the frustration of toxic communities or unstable servers. With a dedicated admin team, supportive staff, and a focus on respect and inclusivity, Mayhem Industries is more than just a gaming network, it's a growing family of players who share a passion for building, exploring, surviving, and having fun together.<br/><br/>
+
+Whether you're here to engineer massive creations, fight for survival, or just relax and make new friends, you'll always have a place in our community.<br/><br/>
+
+<b>Join us today and be part of the mayhem — where gaming meets community.</b>
+</div>
         </section>
         <section className="p-6 rounded-lg mt-16">
           <h2 className="orbitron-900 text-3xl lg:text-5xl font-semibold mb-4 text-blue-400">WHAT WE DO</h2>
-          <p className="text-lg lg:text-xl text-gray-400">Explore our services and find the perfect fit for your gaming experience.</p>
+          <p className="text-lg lg:text-xl text-gray-400">We primarily host game servers for a variety of games. Mainly Space Engineers and Minecraft, but we also run other games as well! Mayhem Industries was founded in 2023, starting off with a simple Space Engineers crossplay creative and Rust server. Now we have grown exponentially, and are a well-known server network in the Space Engineers community. Join today and join our vibrant community of over 1,400+ members on our <a href="https://discord.gg/mayhemindustries">Discord!</a></p>
           {/* ImageCards */}
           <div className="grid grid-cols-1 md:grid-cols-1 xl:grid-cols-3 gap-8 relative z-10 mt-8">
             <IconCard
-              icon={<IoMdChatbubbles className="text-blue-400"/>}
+              icon={<IoLogoDiscord className="text-blue-400"/>}
               alt="minecraft"
               text={<>
               <div>
-                <p className="text-center text-2xl font-bold text-white">Community Forums</p>
+                <p className="text-center text-2xl font-bold text-white">Vibrant Community</p>
               </div>
               <p className="text-center mt-2 text-gray-400">
-                Join discussions, share ideas, and connect with fellow gamers in our vibrant community forums.
+                Join discussions, share ideas, and connect with fellow gamers on our Discord.
               </p>
               </>}
             />
@@ -90,10 +107,10 @@ export default function Home() {
               alt="minecraft"
               text={<>
               <div>
-                <p className="text-center text-2xl font-bold text-white">Crossplay</p>
+                <p className="text-center text-2xl font-bold text-white">Creative and Survival Servers</p>
               </div>
               <p className="text-center mt-2 text-gray-400">
-                Crossplay for games like Space Engineers and Minecraft, connecting players across platforms.
+                We host a variety of Space Engineers servers - from intense creative PVP to laid-back survival servers, we have something for everyone!
               </p>
               </>}
             />
@@ -106,7 +123,7 @@ export default function Home() {
                 <p className="text-center text-2xl font-bold text-white">Multiple Games</p>
               </div>
               <p className="text-center mt-2 text-gray-400">
-                Where gamers can stay connected, find factions to join, team up together, and more!
+                We host more than just Space Engineers! Join our Rust, Minecraft, and Stormworks servers today.
               </p>
               </>}
             />

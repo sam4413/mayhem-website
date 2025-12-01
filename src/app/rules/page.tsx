@@ -30,7 +30,7 @@ export default function Servers() {
       </div>
 
       {/* Text below the main area */}
-      <main className="grid grid-cols-1 md:grid-cols-1 gap-8 relative z-10 ml-8 mr-8 lg:ml-36 lg:mr-36 xl:ml-96 xl:mr-96">
+      <main className="grid grid-cols-1 md:grid-cols-1 gap-8 relative z-10 ml-3 mr-3 lg:ml-12 lg:mr-12 xl:ml-36 xl:mr-36">
         <div className="grid grid-cols-1 md:grid-cols-1 xl:grid-cols-1 gap-8 relative z-10 mt-8">
             <BgImageTextCardShaded
               image="/images/gamebanners/spaceengineers.jpg"
@@ -39,14 +39,14 @@ export default function Servers() {
               description={ 
               <div className="grid grid-cols-1 xl:grid-cols-1 gap-4 relative z-10">
                 <ColoredTextCard
-                  title={<span className="text-2xl lg:text-4xl text-center font-semibold text-white">Creative Steam & Crossplay</span>}
-                  properties={"bg-blue-500"}
+                  title={<span className="text-2xl lg:text-4xl text-center font-semibold text-white">Mayhem Creative Network</span>}
+                  properties={"bg-blue-900"}
                   description={<Editable path="/public/editables/rules/creative.md" />}
                 />
                 
                 <ColoredTextCard
                   title={<span className="text-2xl lg:text-4xl text-center font-semibold text-white">Scrapyard Survival</span>}
-                  properties={"bg-amber-500"}
+                  properties={"bg-blue-900"}
                   description={<Editable path="/public/editables/rules/scrapyard.md" />}
                 />
                 <ColoredTextCard
@@ -100,22 +100,6 @@ export default function Servers() {
                   title={<span className="text-2xl lg:text-4xl text-center font-semibold text-white">7 Days to Die</span>}
                   properties={"bg-red-950"}
                   description={<Editable path="/public/editables/rules/7d2d.md" />}
-                />  
-                
-              </div>
-              }
-            />
-
-            <BgImageTextCardShaded
-              image="/images/gamebanners/projectzomboid.jpg"
-              alt="servers"
-              title={<span className="text-center text-4xl md:text-5xl lg:text-6xl font-semibold mb-4 lexend-mega-landing text-amber-600">PROJECT ZOMBOID</span>}
-              description={ 
-              <div className="grid grid-cols-1 xl:grid-cols-1 gap-4 relative z-10">
-                <ColoredTextCard
-                  title={<span className="text-2xl lg:text-4xl text-center font-semibold text-white">Project Zomboid</span>}
-                  properties={"bg-amber-950"}
-                  description={<Editable path="/public/editables/rules/projectzomboid.md" />}
                 />  
                 
               </div>
