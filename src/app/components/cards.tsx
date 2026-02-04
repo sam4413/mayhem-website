@@ -169,7 +169,7 @@ export function BgImageTextCardShaded({ image, alt, title, description }: TextIm
 
 export function TextCard({ title, description }: TextCardProps) {
   return (
-    <div className="rounded-lg shadow-2xl overflow-hidden ">
+    <div className="rounded-sm shadow-2xl overflow-hidden ">
       {/* Top image section */}
       <div className="bg-slate-800 flex justify-center items-center">
         <h2 className="text-4xl montserrat-600 font-bold text-white p-6">
@@ -188,7 +188,7 @@ export function TextCard({ title, description }: TextCardProps) {
 
 export function ColoredTextCard({ title, properties, description }: ColoredTextCardProps) {
   return (
-    <div className="rounded-lg shadow-2xl overflow-hidden ">
+    <div className="rounded-sm shadow-2xl overflow-hidden ">
       {/* Top image section */}
       <div className={`${properties} flex justify-center items-center`}>
         <h2 className="relative montserrat-600 bottom-1 text-4xl font-bold text-white p-6">

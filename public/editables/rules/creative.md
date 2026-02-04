@@ -1,6 +1,12 @@
-## Welcome to Mayhem Creative with NO limits! 
+## Welcome to Mayhem Creative! 
 
 **We have few rules to ensure a smooth and enjoyable playing experience for everyone.**
+
+### Grid Limits:
+- There is no block limit per grid
+- There is no block limit for static grids / stations.
+- We have a PCU Limit of 300,000 Per Player.
+
 ### Rules:
 1. Copying and blueprinting other people's grids without permission is strictly prohibited. If violated, then a ban will take place.
 2. No laggy creations. You will be warned. If warned 3 times you will be kicked. if continued a ban will take place.

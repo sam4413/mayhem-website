@@ -36,7 +36,7 @@ export function Header() {
           </a>
         </div>
         {/* Center: Navigation (centered absolutely) */}
-        <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+        <div className="hidden lg:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
           <nav>
             <ul className="flex list-none m-0 p-0 items-center space-x-10">
               <li>
@@ -70,21 +70,21 @@ export function Header() {
         {/* Right: Discord & Mobile Menu Toggle */}
         <div className="flex-1 flex justify-end items-center ">
           <a
-            href="https://mayhemindustriesgaming.tip4serv.com/"
-            className="hidden md:flex text-white bg-amber-500 hover:bg-amber-400 px-4 py-2 rounded-md items-center mr-4 transition-all duration-200 transform hover:scale-105 relative overflow-hidden group"
+            href="https://store.mayhem-gaming.com"
+            className="hidden lg:flex text-white bg-blue-600 hover:bg-sky-500 px-4 py-2 rounded-md items-center mr-4 transition-all duration-200 transform hover:scale-105 relative overflow-hidden group"
             style={{ boxShadow: "0 2px 8px 0 rgba(255,193,7,0.15)" }}
           >
             <span className="absolute inset-0 z-0 pointer-events-none before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/60 before:to-transparent before:opacity-0 group-hover:before:opacity-100 before:animate-shine" />
-            <FcDonate className="relative z-10" /> &nbsp; <span className="relative z-10">Donate!</span>
+            <FcDonate className="relative z-10" /> &nbsp; <span className="relative z-10">Store</span>
           </a>
           <a
             href="https://discord.gg/mayhemindustries"
-            className="hidden md:flex text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-md items-center mr-4"
+            className="hidden lg:flex text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-md items-center mr-4"
           >
             <FaDiscord /> &nbsp; Discord
           </a>
           <button
-            className="md:hidden text-white focus:outline-none"
+            className="lg:hidden text-white focus:outline-none"
             onClick={toggleMenu}
             aria-label="Toggle menu"
             aria-expanded={isOpen}
@@ -137,7 +137,7 @@ export function Header() {
 
       {/* Mobile Menu with smooth dropdown animation */}
       <div
-        className={`orbitron-600 fixed top-16 left-0 w-full bg-gray-950/50 rounded-b-2xl backdrop-blur md:hidden z-40 overflow-hidden transition-all duration-500 ease-in-out ${
+        className={`orbitron-600 fixed top-16 left-0 w-full bg-gray-950/50 rounded-b-2xl backdrop-blur lg:hidden z-40 overflow-hidden transition-all duration-500 ease-in-out ${
           isOpen ? 'max-h-[500px] opacity-100 pointer-events-auto' : 'max-h-0 opacity-0 pointer-events-none'
         }`}
         style={{
@@ -176,12 +176,12 @@ export function Header() {
         </nav>
         <div className="px-5 pb-4">
           <a
-            href="https://mayhemindustriesgaming.tip4serv.com/"
-            className="w-full text-white bg-amber-500 hover:bg-amber-400 px-4 py-2 rounded-md flex items-center transition-all duration-200 transform hover:scale-105 relative overflow-hidden group"
+            href="https://store.mayhem-gaming.com/"
+            className="w-full text-white bg-blue-600 hover:bg-sky-400 px-4 py-2 rounded-md flex items-center transition-all duration-200 transform hover:scale-105 relative overflow-hidden group"
             style={{ boxShadow: "0 2px 8px 0 rgba(255,193,7,0.15)" }}
           >
             <span className="absolute inset-0 z-0 pointer-events-none before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/60 before:to-transparent before:opacity-0 group-hover:before:opacity-100 before:animate-shine" />
-            <FcDonate className="relative z-10" /> &nbsp; <span className="relative z-10">Donate!</span>
+            <FcDonate className="relative z-10" /> &nbsp; <span className="relative z-10">Store</span>
           </a>
         </div>
         <div className="px-5 pb-4">
