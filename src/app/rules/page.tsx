@@ -37,72 +37,16 @@ export default function Rules() {
         <div className="flex justify-center items-center">
           <div className="w-full max-w-8xl mx-auto">
             <TitleTextCard
-              header={"🎮 Community Standards"}
+              header={<p className="text-5xl text-rose-600">🚧 New Rules Page is in Development.</p>}
               description={ <>
-              <span className="montserrat-600">All Mayhem Industries servers are built on respect, fairness, and inclusivity. While each game has specific rules, our core values of no cheating, no toxicity, and respect for all players apply everywhere. Click on a game below to see detailed rules.</span>
+              <span className="montserrat-600 text-2xl">We apologize for the inconvenience. Please visit our discord at discord.gg/mayhemindustries to visit the rules.</span>
               </>
               }
-              headerProperies={"mt-4 mb-4 p-8 text-center text-purple-500 orbitron-900 border-2 border-blue-500 hover:scale-103 hover:border-purple-500 bg-blue-500/10"}
-              descriptionProperties={"text-gray-400 text-center"}
+              headerProperies={"mt-4 mb-4 p-8 text-center text-purple-500 orbitron-900 border-2 border-yellow-500 bg-yellow-500/10"}
+              descriptionProperties={"text-gray-400 text-center text-xl"}
             />
 
-            <div className="mt-5 grid grid-cols-1 md:grid-cols-3 gap-8 xl:gap-4 md:gap-2 sm:gap-1 mx-auto max-w-6xl text-white">
-                <TitleImageTextCard 
-                  src={"/images/cosmonauts-cta.webp"} 
-                  alt={"Space Enginners"} 
-                  header={<><p className="bg-gradient-to-r from-purple-500 to-fuchsia-700 bg-clip-text text-transparent text-center ">Space Engineers</p></>} 
-                  description={<></>} 
-                  headerProperies={"mt-4 mb-4 mr-2 ml-2 game-rule-card border-3 border-white"}
-                  descriptionProperties={""}
-                />
-                <TitleImageTextCard 
-                  src={"/images/cosmonauts-cta.webp"} 
-                  alt={"Space Enginners"} 
-                  header={<><p className="bg-gradient-to-r from-purple-500 to-fuchsia-700 bg-clip-text text-transparent text-center ">Space Engineers</p></>} 
-                  description={<></>} 
-                  headerProperies={"mt-4 mb-4 mr-2 ml-2 game-rule-card"}
-                  descriptionProperties={""}
-                />
-                <TitleImageTextCard 
-                  src={"/images/cosmonauts-cta.webp"} 
-                  alt={"Space Enginners"} 
-                  header={<><p className="bg-gradient-to-r from-purple-500 to-fuchsia-700 bg-clip-text text-transparent text-center ">Space Engineers</p></>} 
-                  description={<></>} 
-                  headerProperies={"mt-4 mb-4 mr-2 ml-2 game-rule-card"}
-                  descriptionProperties={""}
-                />
-            </div>
-
-            <SubtitleTextCard
-              description={
-              <>
-              
-                <p className="text-gray-400 text-sm montserrat-400"><span className="text-bold montserrat-600">Important: </span>
-                Offense 1-3 will reset after 90 days. If a rule is broken within the 90 days we will proceed to offense 5. Offense 5 and Offense 6 bans apply across all Mayhem servers case by case. Offense 1 through Offense 4 warnings are server-specific. </p>
-              </>
-
-              } 
-              properties="mt-4 mb-4 p-6 border-3 w-full border-blue-500 bg-blue-500/10"
-              descriptionProperties=""
-              />
-
-              <SubtitleTextCard
-              description={
-              <>
-              
-                <p className="text-gray-400 text-sm montserrat-400"><span className="text-bold montserrat-600 text-shadow-yellow-500">Example of how bans work: </span><br/><br/>
-                <span className="montserrat-600">Scenario 1:</span> John was playing Space Engineers steam creative and got banned on SE Steam Creative. This will account for both EOS and Steam Creative but not Survival, Minecraft, Hytale, etc.<br /> <br />
-
-                <span className="montserrat-600">Scenario 2:</span> John is playing once again Steam creative and decided that he is going to steal a grid and be a jerk about it. John is now banned from all servers Mayhem owns. Not for stealing the grid, but for being a jerk. If he had just accepted the ban, he would still have access to the servers like survival, minecraft, etc.
-                
-                
-                </p>
-              </>
-
-              } 
-              properties="mt-4 mb-4 p-6 border-3 w-full border-yellow-500 bg-yellow-500/10"
-              descriptionProperties=""
-              />
+            
 
 
           </div>
