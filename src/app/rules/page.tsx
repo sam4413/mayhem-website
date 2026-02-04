@@ -3,8 +3,11 @@ import Image from "next/image";
 import {ImageCard, TextCard, BgImageCard, BgImageTextCard, ColoredTextCard, BgImageTextCardShaded} from "../components/cards";
 import {Editable} from "../components/editable";
 import {MainPageLander, SubPageLander} from "../components/navigation";
+import { ButtonCard, InlineOrderedHeading, SubtitleTextCard, TitleTextCard } from "../components/cardsv2/textCards";
+import { StrikeTable } from "../components/cardsv2/etc";
+import { TitleImageTextCard } from "../components/cardsv2/imageCards";
 
-export default function Servers() {
+export default function Rules() {
   return (
     <div className="relative overflow-hidden">
       {/* Starfield */}
@@ -22,157 +25,89 @@ export default function Servers() {
         </div>
 
         <SubPageLander
-        title="SERVER RULES"
-        description="View our server rules, join the community, and stay connected with the latest updates."
-        
+        title={<><span className="bg-gradient-to-r from-purple-500 to-fuchsia-700 bg-clip-text text-transparent">SERVER RULES & GUIDELINES</span></>}
+        description="Select your game below to view the specific rules and guidelines for that server."
+        properties="bg-gray-950"
         />
 
       </div>
 
       {/* Text below the main area */}
       <main className="grid grid-cols-1 md:grid-cols-1 gap-8 relative z-10 ml-8 mr-8 lg:ml-36 lg:mr-36 xl:ml-96 xl:mr-96">
-        <div className="grid grid-cols-1 md:grid-cols-1 xl:grid-cols-1 gap-8 relative z-10 mt-8">
-            <BgImageTextCardShaded
-              image="/images/gamebanners/spaceengineers.jpg"
-              alt="servers"
-              title={<span className="text-center text-4xl md:text-5xl lg:text-6xl font-semibold mb-4 lexend-mega-landing text-blue-400">SPACE ENGINEERS RULES</span>}
-              description={ 
-              <div className="grid grid-cols-1 xl:grid-cols-1 gap-4 relative z-10">
-                <ColoredTextCard
-                  title={<span className="text-2xl lg:text-4xl text-center font-semibold text-white">Creative Steam & Crossplay</span>}
-                  properties={"bg-blue-500"}
-                  description={<Editable path="/public/editables/rules/creative.md" />}
+        <div className="flex justify-center items-center">
+          <div className="w-full max-w-8xl mx-auto">
+            <TitleTextCard
+              header={"🎮 Community Standards"}
+              description={ <>
+              <span className="montserrat-600">All Mayhem Industries servers are built on respect, fairness, and inclusivity. While each game has specific rules, our core values of no cheating, no toxicity, and respect for all players apply everywhere. Click on a game below to see detailed rules.</span>
+              </>
+              }
+              headerProperies={"mt-4 mb-4 p-8 text-center text-purple-500 orbitron-900 border-2 border-blue-500 hover:scale-103 hover:border-purple-500 bg-blue-500/10"}
+              descriptionProperties={"text-gray-400 text-center"}
+            />
+
+            <div className="mt-5 grid grid-cols-1 md:grid-cols-3 gap-8 xl:gap-4 md:gap-2 sm:gap-1 mx-auto max-w-6xl text-white">
+                <TitleImageTextCard 
+                  src={"/images/cosmonauts-cta.webp"} 
+                  alt={"Space Enginners"} 
+                  header={<><p className="bg-gradient-to-r from-purple-500 to-fuchsia-700 bg-clip-text text-transparent text-center ">Space Engineers</p></>} 
+                  description={<></>} 
+                  headerProperies={"mt-4 mb-4 mr-2 ml-2 game-rule-card border-3 border-white"}
+                  descriptionProperties={""}
                 />
-                
-                <ColoredTextCard
-                  title={<span className="text-2xl lg:text-4xl text-center font-semibold text-white">Scrapyard Survival</span>}
-                  properties={"bg-amber-500"}
-                  description={<Editable path="/public/editables/rules/scrapyard.md" />}
+                <TitleImageTextCard 
+                  src={"/images/cosmonauts-cta.webp"} 
+                  alt={"Space Enginners"} 
+                  header={<><p className="bg-gradient-to-r from-purple-500 to-fuchsia-700 bg-clip-text text-transparent text-center ">Space Engineers</p></>} 
+                  description={<></>} 
+                  headerProperies={"mt-4 mb-4 mr-2 ml-2 game-rule-card"}
+                  descriptionProperties={""}
                 />
-                <ColoredTextCard
-                  title={<span className="text-2xl lg:text-4xl text-center font-semibold text-white">Mayhem Vanilla Survival with NO limits</span>}
-                  properties={"bg-rose-500"}
-                  description={<Editable path="/public/editables/rules/crossplayvanillasurvival.md" />}
+                <TitleImageTextCard 
+                  src={"/images/cosmonauts-cta.webp"} 
+                  alt={"Space Enginners"} 
+                  header={<><p className="bg-gradient-to-r from-purple-500 to-fuchsia-700 bg-clip-text text-transparent text-center ">Space Engineers</p></>} 
+                  description={<></>} 
+                  headerProperies={"mt-4 mb-4 mr-2 ml-2 game-rule-card"}
+                  descriptionProperties={""}
                 />
-                
-              </div>
-              }
-            />
-            <BgImageTextCardShaded
-              image="/images/gamebanners/rust.jpg"
-              alt="servers"
-              title={<span className="text-center text-4xl md:text-5xl lg:text-6xl font-semibold mb-4 lexend-mega-landing text-amber-600">RUST RULES</span>}
-              description={ 
-              <div className="grid grid-cols-1 xl:grid-cols-1 gap-4 relative z-10">
-                <ColoredTextCard
-                  title={<span className="text-2xl lg:text-4xl text-center font-semibold text-white">Mayhem Rust</span>}
-                  properties={"bg-amber-800"}
-                  description={<Editable path="/public/editables/rules/rust.md" />}
-                />  
-                
-              </div>
-              }
-            />
+            </div>
 
-            <BgImageTextCardShaded
-              image="/images/gamebanners/ark.webp"
-              alt="servers"
-              title={<span className="text-center text-4xl md:text-5xl lg:text-6xl font-semibold mb-4 lexend-mega-landing text-green-700">ARK</span>}
-              description={ 
-              <div className="grid grid-cols-1 xl:grid-cols-1 gap-4 relative z-10">
-                <ColoredTextCard
-                  title={<span className="text-2xl lg:text-4xl text-center font-semibold text-white">Mayhem Ark</span>}
-                  properties={"bg-green-900"}
-                  description={<Editable path="/public/editables/rules/ark.md" />}
-                />  
-                
-              </div>
-              }
-            />
-
-            <BgImageTextCardShaded
-              image="/images/gamebanners/7d2d.jpg"
-              alt="servers"
-              title={<span className="text-center text-4xl md:text-5xl lg:text-6xl font-semibold mb-4 lexend-mega-landing text-red-500">7 DAYS TO DIE</span>}
-              description={ 
-              <div className="grid grid-cols-1 xl:grid-cols-1 gap-4 relative z-10">
-                <ColoredTextCard
-                  title={<span className="text-2xl lg:text-4xl text-center font-semibold text-white">7 Days to Die</span>}
-                  properties={"bg-red-950"}
-                  description={<Editable path="/public/editables/rules/7d2d.md" />}
-                />  
-                
-              </div>
-              }
-            />
-
-            <BgImageTextCardShaded
-              image="/images/gamebanners/projectzomboid.jpg"
-              alt="servers"
-              title={<span className="text-center text-4xl md:text-5xl lg:text-6xl font-semibold mb-4 lexend-mega-landing text-amber-600">PROJECT ZOMBOID</span>}
-              description={ 
-              <div className="grid grid-cols-1 xl:grid-cols-1 gap-4 relative z-10">
-                <ColoredTextCard
-                  title={<span className="text-2xl lg:text-4xl text-center font-semibold text-white">Project Zomboid</span>}
-                  properties={"bg-amber-950"}
-                  description={<Editable path="/public/editables/rules/projectzomboid.md" />}
-                />  
-                
-              </div>
-              }
-            />
-
-
-
-            <BgImageTextCardShaded
-              image="/images/gamebanners/minecraft.jpg"
-              alt="minecraft"
-              title={<span className="text-center text-4xl md:text-5xl lg:text-6xl font-semibold mb-4 lexend-mega-landing text-green-500">MINECRAFT RULES</span>}
+            <SubtitleTextCard
               description={
-              <div className="grid grid-cols-1 xl:grid-cols-1 gap-4 relative z-10">
-                <ColoredTextCard
-                  title={<span className="text-2xl lg:text-4xl text-center font-semibold text-white">Minecraft</span>}
-                  properties={"bg-green-500"}
-                  description={<Editable path="/public/editables/rules/minecraft.md" />}
-                />
-              </div>
-              }
-            />
+              <>
+              
+                <p className="text-gray-400 text-sm montserrat-400"><span className="text-bold montserrat-600">Important: </span>
+                Offense 1-3 will reset after 90 days. If a rule is broken within the 90 days we will proceed to offense 5. Offense 5 and Offense 6 bans apply across all Mayhem servers case by case. Offense 1 through Offense 4 warnings are server-specific. </p>
+              </>
 
-            <BgImageTextCardShaded
-              image="/images/gamebanners/discordbanner.jpg"
-              alt="discord"
-              title={<span className="text-center text-4xl md:text-5xl lg:text-6xl font-semibold mb-4 lexend-mega-landing text-blue-500">DISCORD RULES</span>}
+              } 
+              properties="mt-4 mb-4 p-6 border-3 w-full border-blue-500 bg-blue-500/10"
+              descriptionProperties=""
+              />
+
+              <SubtitleTextCard
               description={
-                <div className="grid grid-cols-1 xl:grid-cols-1 gap-4 relative z-10">
-                  <ColoredTextCard
-                    title={<span className="text-2xl text-center font-semibold text-white">Discord</span>}
-                    properties={"bg-purple-500"}
-                    description={<Editable path="/public/editables/rules/discord.md" />}
-                  />                  
-              </div>
+              <>
+              
+                <p className="text-gray-400 text-sm montserrat-400"><span className="text-bold montserrat-600 text-shadow-yellow-500">Example of how bans work: </span><br/><br/>
+                <span className="montserrat-600">Scenario 1:</span> John was playing Space Engineers steam creative and got banned on SE Steam Creative. This will account for both EOS and Steam Creative but not Survival, Minecraft, Hytale, etc.<br /> <br />
 
-              }
-            />
-            
+                <span className="montserrat-600">Scenario 2:</span> John is playing once again Steam creative and decided that he is going to steal a grid and be a jerk about it. John is now banned from all servers Mayhem owns. Not for stealing the grid, but for being a jerk. If he had just accepted the ban, he would still have access to the servers like survival, minecraft, etc.
+                
+                
+                </p>
+              </>
+
+              } 
+              properties="mt-4 mb-4 p-6 border-3 w-full border-yellow-500 bg-yellow-500/10"
+              descriptionProperties=""
+              />
+
+
           </div>
+        </div>
       </main>
-
-      {/* Starfield and CometField components */}
-      <style jsx global>{`
-        .star {
-          pointer-events: none;
-          position: absolute;
-          border-radius: 9999px;
-          background: white;
-          opacity: 0.7;
-          animation: star-twinkle 2s infinite alternate;
-        }
-        @keyframes star-twinkle {
-          0% { opacity: 0.5; }
-          100% { opacity: 1; }
-        }
-      `}</style>
     </div>
   );
 }

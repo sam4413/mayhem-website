@@ -5,8 +5,9 @@ import { FaDiscord, FaDonate } from "react-icons/fa";
 import { IoGameController } from "react-icons/io5";
 import { FcDonate } from "react-icons/fc";
 interface LandingProps {
-  title: string; 
+  title: React.ReactNode; 
   description?: string;
+  properties?: React.ReactNode;
 }
 
 
@@ -49,8 +50,8 @@ export function Header() {
                 </a>
               </li>
               <li>
-                <a href="/status" className="text-white hover:text-gray-300">
-                  Status
+                <a href="/mayhemverse" className="text-white hover:text-gray-300">
+                  Mayhemverse
                 </a>
               </li>
               <li>
@@ -157,8 +158,8 @@ export function Header() {
               </a>
             </li>
             <li>
-              <a href="/status" className="text-white hover:text-gray-300">
-                Status
+              <a href="/mayhemverse" className="text-white hover:text-gray-300">
+                Mayhemverse
               </a>
             </li>
             <li>
@@ -219,7 +220,7 @@ export function Footer() {
             <a href="https://forums.mayhem-gaming.com/forumdisplay.php?fid=13" className="text-white hover:text-gray-300">Appeals</a>
           </li>
           <li>
-            <a href="/status" className="text-white hover:text-gray-300">Status</a>
+            <a href="/mayhemverse" className="text-white hover:text-gray-300">Mayhemverse</a>
           </li>
           <li>
             <a href="/servers" className="text-white hover:text-gray-300">Servers</a>
@@ -240,7 +241,7 @@ export function Footer() {
   );
 };
 
-export function MainPageLander({title, description}: LandingProps ) {
+export function MainPageLander({title, description, properties}: LandingProps ) {
   return (
     <div className="relative z-10 flex h-full flex-1 items-center justify-center px-4">
       <div className="text-center">
@@ -275,12 +276,12 @@ export function MainPageLander({title, description}: LandingProps ) {
   );
 };
 
-export function SubPageLander({title, description}: LandingProps ) {
+export function SubPageLander({title, description, properties}: LandingProps ) {
   return (
-    <div className="relative z-10 flex h-85 flex-1 items-center justify-center px-4">
+    <div className={`relative z-10 flex h-85 flex-1 items-center justify-center px-4 ${properties}`}>
       <div className="text-center">
         <h1 className="text-4xl xl:text-7xl lg:text-6xl md:text-4xl font-bold tracking-tight text-white">
-          <span className="lexend-mega-landing bg-cyan-500 bg-clip-text text-transparent">{title}</span>
+          <span className="lexend-mega-landing ">{title}</span>
         </h1>
         <p className="lexend-mega-landing mx-auto mb-8 text-2xl text-white">
           {description}

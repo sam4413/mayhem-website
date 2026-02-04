@@ -4,7 +4,7 @@ import {ImageCard, TextCard, BgImageCard, BgImageTextCard, ColoredTextCard, BgIm
 import {Editable} from "../components/editable";
 import {SubPageLander} from "../components/navigation";
 
-export default function Servers() {
+export default function About() {
   return (
     <div className="relative overflow-hidden">
       {/* Starfield */}

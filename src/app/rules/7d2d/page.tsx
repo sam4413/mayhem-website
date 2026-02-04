@@ -1,8 +1,8 @@
 "use client";
 import Image from "next/image";
-import {ImageCard, TextCard, BgImageCard, BgImageTextCard, ColoredTextCard, BgImageTextCardShaded} from "../components/cards";
-import {Editable} from "../components/editable";
-import {SubPageLander} from "../components/navigation";
+import {ImageCard, TextCard, BgImageCard, BgImageTextCard, ColoredTextCard, BgImageTextCardShaded} from "../../components/cards";
+import {Editable} from "../../components/editable";
+import {MainPageLander, SubPageLander} from "../../components/navigation";
 
 export default function Servers() {
   return (
@@ -16,13 +16,14 @@ export default function Servers() {
         <div className="absolute inset-0">
           <div className="relative h-full w-full bg-slate-950 ">
             <div className="fadeInSlowly [&>div]:absolute [&>div]:inset-0 [&>div]:bg-[radial-gradient(circle_800px_at_50%_500px,#17006180,transparent)]">
+              
             </div>
           </div>
         </div>
 
         <SubPageLander
-        title="SERVER STATUS"
-        description="View our server status and be notified of any downtime."
+        title="SERVER RULES"
+        description="View our server rules, join the community, and stay connected with the latest updates."
         
         />
 
@@ -31,16 +32,8 @@ export default function Servers() {
       {/* Text below the main area */}
       <main className="grid grid-cols-1 md:grid-cols-1 gap-8 relative z-10 ml-8 mr-8 lg:ml-36 lg:mr-36 xl:ml-96 xl:mr-96">
         <div className="grid grid-cols-1 md:grid-cols-1 xl:grid-cols-1 gap-8 relative z-10 mt-8">
-            
-            <ColoredTextCard
-                title={<span className="text-2xl lg:text-4xl text-center font-semibold text-white">Server Status</span>}
-                properties={"bg-slate-800"}
-                description={<iframe className="w-full h-[800px] overflow-hidden"
-              src="https://status.mayhem-gaming.com/status/mayhem/"
-              ></iframe>}
-            ></ColoredTextCard>
-            
-            
+          
+          
         </div>
       </main>
 

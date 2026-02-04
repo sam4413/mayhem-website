@@ -8,17 +8,18 @@ import {Editable} from "./components/editable";
 import { MainPageLander } from "./components/navigation";
 import {VideoGallery} from './components/gallery';
 import { RiComputerFill } from "react-icons/ri";
-const videos = [
-  '/videos/Background01.mp4',
-  '/videos/Background02.mp4',
-  '/videos/Background06.mp4',
+export const videos = [
+  '/videos/home/Background01.mp4',
+  '/videos/home/Background02.mp4',
+  '/videos/home/Background06.mp4',
 ];
 
 export default function Home() {
   return (
     <div className="relative overflow-hidden">
       {/* Starfield */}
-        <div className="absolute inset-0">
+        <div className={`absolute inset-0 ${window.matchMedia('(max-width: 768px)').matches ? 'hidden' : 'w-full'} `}>
+
           <div className="relative h-full w-full bg-slate-950 z-0">
             <div className="fadeInVerySlowly [&>div]:absolute">
               <VideoGallery videos={videos} intervalMs={20000} opacity={50}/>
